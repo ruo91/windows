@@ -1,0 +1,20 @@
+﻿<?xml version="1.0"?>
+<forwarder>
+
+<!-- 	This configuration file is located in your installion directory.
+
+	Here is sample configuration entry. It listens TCP-port 1234 and when client connects to it, connection 
+	is forwarded to another host: If connecting clients IP-address is 127.0.0.1 (localhost) connection is 
+	forwarded to 123.123.123.123 port 1234. If client is connecting from IP-address starting with 192.168
+	connection is dropped. If client's IP-address is 10.0.1.1-255 it is forwarded to 123.123.123.123 
+	port 5678. All other connecting clients are dropped. Rules are processed in order and first 
+	match is used. Match is regular expression string. Addresses that cannot be matched are dropped. You
+	can have multiple listen elements (listen multiple ports). And each of them can have own rules.
+	 
+	<listen port="1234">
+		<forward match="127.0.0.\d*" destination="123.123.123.123" destinationPort="1234"/>
+		<deny match="192.168.\d*.\d*"/>
+		<forward match="10.0.1.\d*" destination="123.123.123.123" destinationPort="5678"/>		
+	</listen>
+-->
+</forwarder>
